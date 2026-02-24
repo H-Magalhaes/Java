@@ -1,0 +1,42 @@
+import java.util. Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in = new Scanner (System.in);
+	    int n, m;
+	    float resultado;
+	    char operação;
+	   
+	    System.out.print("Insira o primeiro valor: ");
+	   n = in.nextInt();
+	   System.out.print("Insira o segundo valor: ");
+	   m = in.nextInt();
+	   in.nextLine();
+	   System.out.print("Insira operação que deseja: multiplicação (*), divisão (/), soma (+), subtração (-): ");
+	   operação = in.nextLine().charAt(0);
+	   
+	   switch(operação){
+	   
+	            case '+':
+		            System.out.println("O valor da soma é: " + (n+m));
+		            break;
+		        case '-':
+		            System.out.println("O valor da subtração é: " + (n-m));
+		            break;
+		        case '*':
+		            System.out.println("O valor da multiplicação é: " + (n*m));
+		            break;
+		        case '/':
+		            if (m == 0){
+		                System.out.println("Impossível de dividir por 0");
+		            }else{
+		                System.out.println("O valor da divisão é: " + (n/m));
+		            }
+		            break;
+		      default:
+		            System.out.println("Erro, tente novamente");
+		            break;
+		            
+	   }
+	}
+}
