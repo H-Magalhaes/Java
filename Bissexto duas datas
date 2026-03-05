@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in = new Scanner(System.in);
+	    int i=0, anoi, anof;
+	    int anobissexto=0;
+	    System.out.print("Insira o ano inicial: ");
+	    anoi = in.nextInt();
+	    System.out.print("Insira o ano final: ");
+	    anof = in.nextInt();
+	    for(i = 0; i<=4; i++){
+	        if((anoi%4==0 && anoi%100!=0) || (anoi%400 == 0)){
+		        anobissexto = anoi;
+		        break;
+		    }
+		    anoi++;
+	    }
+	    for(i = anobissexto; i <= anof; i+=4){
+	        System.out.println(""+ i);
+	    }
+	}
+}
