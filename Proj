@@ -1,0 +1,19 @@
+int main(){
+    int b, a=0;
+
+    printf("Hello World");
+    a=2;
+    
+    printf("\nO valor de a é %d e %.1f", a, 10.53);
+    
+    printf("\n%d + %d=%d", 2, 2, (a+2));
+    
+    printf("\n\n a está em: %x e b está em %x", &a, &b);
+    
+    printf("\nInsira um número: ", a);
+    scanf("%d",&a);
+    
+    printf("\nO valor final de a é = %d\n", a);
+
+    return 0;
+}
