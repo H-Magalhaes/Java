@@ -1,0 +1,45 @@
+import java.util. Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner in = new Scanner (System.in);
+	    int n, m;
+	    float resultado;
+	    String nome, apelido;
+	    char sit;
+	   
+	   System.out.print("Insira o seu nome: ");
+	   nome = in.nextLine();
+	   System.out.print("Insira o seu Apelido: ");
+	   apelido = in.nextLine();
+	   System.out.print("Casado(c) ou Não Casado(n)");
+	   sit = in.nextLine().charAt(0);
+	   System.out.print("Insira o primeiro valor: ");
+	   n = in.nextInt();
+	   System.out.print("Insira o segundo valor: ");
+	   m = in.nextInt();
+	   resultado = (float)n / m;
+	
+	   /* if (sit == 'c' || sit == 'C'){
+		    System.out.println("O nome do utilizador é "+ nome +" "+ apelido +" com o estado cívil Casado solicitou o cálculo de valor: " + resultado);
+		} else {
+		    if(sit == 'n' || sit == 'N'){
+		        System.out.println("O nome do utilizador é "+ nome +" "+ apelido +" com o estado cívil não casado solicitou o cálculo de valor: " + resultado);
+		    }else{
+		        System.out.println("O nome do utilizador é "+ nome +" "+ apelido +" com o estado cívil inválido solicitou o cálculo de valor: " + resultado);
+		    }*/
+		    
+		    switch (sit)
+		    {
+		        case 'c':
+		            System.out.println("O nome do utilizador é "+ nome +" "+ apelido +" com o estado cívil Casado solicitou o cálculo de valor: " + resultado);
+		            break;
+		        case 'n':
+		            System.out.println("O nome do utilizador é "+ nome +" "+ apelido +" com o estado cívil não casado solicitou o cálculo de valor: " + resultado);
+		            break;
+		        default:
+		             System.out.println("O nome do utilizador é "+ nome +" "+ apelido +" com o estado cívil inválido solicitou o cálculo de valor: " + resultado);
+		             break;
+		    }
+	}
+}
