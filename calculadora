@@ -1,42 +1,46 @@
-import java.util. Scanner;
+import java.util.Scanner;
 public class Main
 {
 	public static void main(String[] args) {
-	    Scanner in = new Scanner (System.in);
-	    int n, m;
-	    float resultado;
-	    char operação;
-	   
-	    System.out.print("Insira o primeiro valor: ");
-	   n = in.nextInt();
-	   System.out.print("Insira o segundo valor: ");
-	   m = in.nextInt();
-	   in.nextLine();
-	   System.out.print("Insira operação que deseja: multiplicação (*), divisão (/), soma (+), subtração (-): ");
-	   operação = in.nextLine().charAt(0);
-	   
-	   switch(operação){
-	   
-	            case '+':
-		            System.out.println("O valor da soma é: " + (n+m));
-		            break;
-		        case '-':
-		            System.out.println("O valor da subtração é: " + (n-m));
-		            break;
-		        case '*':
-		            System.out.println("O valor da multiplicação é: " + (n*m));
-		            break;
-		        case '/':
-		            if (m == 0){
-		                System.out.println("Impossível de dividir por 0");
-		            }else{
-		                System.out.println("O valor da divisão é: " + (n/m));
-		            }
-		            break;
-		      default:
-		            System.out.println("Erro, tente novamente");
-		            break;
-		            
-	   }
+	    Scanner in= new Scanner(System.in);
+		
+		int n1,n2,op;
+        char continuar = 's';
+        while(continuar == 's' || continuar == 'S'){
+            System.out.print("Insira o primeiro numero: ");
+            n1 = in.nextInt();
+            System.out.print("Insira o segundo numero: ");
+            n2 = in.nextInt();
+	    System.out.println("Qual a operacao a realizar:");
+	    System.out.println("1 = + \n2 = - \n3 = x \n4 = /");
+	    
+	    op = in.nextInt();
+	    switch (op)
+	    {
+	    	case 1:
+            		in.nextLine();
+            		System.out.println("A soma de " +n1+ " + " +n2+ " é: " + (n1+n2));
+			break;
+		case 2:
+            		in.nextLine();
+            		System.out.println("A subtracao de " +n1+ " - " +n2+ " é: " + (n1-n2));
+			break;
+		case 3:
+            		in.nextLine();
+            		System.out.println("A multiplicacao de " +n1+ " x " +n2+ " é: " + (n1*n2));
+			break;
+		case 4:
+            		in.nextLine();
+            		System.out.println("A divisao de " +n1+ " / " +n2+ " é: " + ((float)n1/n2));
+			break;
+		default:
+			in.nextLine();
+                        System.out.println("A operacao escolhida é invalida!");
+	    }
+            System.out.println("Pretende continuar (s/n)?");
+            continuar = in.nextLine().charAt(0);
+        }
+        System.out.println("Escolheu sair do programa!");
+
 	}
 }
